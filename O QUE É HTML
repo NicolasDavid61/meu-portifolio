@@ -1,0 +1,369 @@
+<!--
+Aluno: Nicolas David Lopes Monteiro
+RA: 22551515
+Atividade final HTML 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Metalinguístico - UX, UI, WCAG e Tags Semânticas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1f4e79;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #163a5a;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    main {
+      width: 90%;
+      max-width: 1100px;
+      margin: 20px auto;
+    }
+
+    section, article, aside {
+      background-color: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 {
+      color: #1f4e79;
+    }
+
+    figure {
+      text-align: center;
+    }
+
+    figure img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table, th, td {
+      border: 1px solid #999;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #dce6f1;
+    }
+
+    .tag {
+      background-color: #eef5ff;
+      padding: 10px;
+      border-left: 5px solid #1f4e79;
+      margin: 10px 0;
+      border-radius: 6px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea, select, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #1f4e79;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #163a5a;
+    }
+
+    footer {
+      background-color: #1f4e79;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    code {
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Página HTML Metalinguística</h1>
+    <p>Uma página que usa e explica o próprio HTML, além de conceitos de UX, UI, WCAG e Heurísticas de Nielsen.</p>
+  </header>
+
+  <nav>
+    <a href="#html">HTML</a>
+    <a href="#tags">Tags</a>
+    <a href="#semanticas">Semânticas</a>
+    <a href="#uxui">UX/UI</a>
+    <a href="#wcag">WCAG</a>
+    <a href="#nielsen">Nielsen</a>
+    <a href="#midia">Mídia</a>
+    <a href="#ia">Uso de IA</a>
+  </nav>
+
+  <main>
+
+    <section id="html">
+      <h2>O que é HTML?</h2>
+      <p>HTML significa <strong>HyperText Markup Language</strong>. É a linguagem de marcação usada para estruturar páginas na web. Com HTML, conseguimos organizar títulos, parágrafos, imagens, vídeos, listas, tabelas, formulários e outras partes do conteúdo.</p>
+      <p>Esta página é metalinguística porque ela usa o HTML para falar sobre o próprio HTML e sobre recursos importantes do desenvolvimento web.</p>
+    </section>
+
+    <section id="tags">
+      <h2>Exemplos de tags HTML e suas funções</h2>
+
+      <div class="tag">
+        <h3>&lt;h1&gt; até &lt;h6&gt;</h3>
+        <p>Essas tags representam títulos e subtítulos. A tag <code>&lt;h1&gt;</code> é a mais importante e normalmente indica o tema principal da página.</p>
+      </div>
+
+      <div class="tag">
+        <h3>&lt;p&gt;</h3>
+        <p>A tag <code>&lt;p&gt;</code> é usada para criar parágrafos. Ela organiza o texto em blocos, facilitando a leitura.</p>
+      </div>
+
+      <div class="tag">
+        <h3>&lt;a&gt;</h3>
+        <p>A tag <code>&lt;a&gt;</code> cria links. Ela pode levar o usuário para outra parte da mesma página ou para outro site.</p>
+      </div>
+
+      <div class="tag">
+        <h3>&lt;img&gt;</h3>
+        <p>A tag <code>&lt;img&gt;</code> insere imagens. O atributo <code>alt</code> é importante para acessibilidade, pois descreve a imagem.</p>
+      </div>
+
+      <div class="tag">
+        <h3>&lt;ul&gt;, &lt;ol&gt; e &lt;li&gt;</h3>
+        <p>Essas tags criam listas. <code>&lt;ul&gt;</code> faz lista não ordenada, <code>&lt;ol&gt;</code> faz lista ordenada e <code>&lt;li&gt;</code> representa cada item.</p>
+      </div>
+
+      <div class="tag">
+        <h3>&lt;table&gt;</h3>
+        <p>A tag <code>&lt;table&gt;</code> permite mostrar dados em formato de tabela, com linhas e colunas.</p>
+      </div>
+
+      <div class="tag">
+        <h3>&lt;form&gt;</h3>
+        <p>A tag <code>&lt;form&gt;</code> é usada para formulários, permitindo entrada de dados pelo usuário.</p>
+      </div>
+    </section>
+
+    <section id="semanticas">
+      <h2>Tags semânticas</h2>
+      <p>As tags semânticas ajudam a dar significado ao conteúdo da página. Elas organizam melhor a estrutura e facilitam o entendimento tanto para desenvolvedores quanto para navegadores, mecanismos de busca e tecnologias assistivas.</p>
+
+      <article>
+        <h3>Exemplos de tags semânticas</h3>
+        <ul>
+          <li><strong>&lt;header&gt;</strong>: cabeçalho da página ou de uma seção.</li>
+          <li><strong>&lt;nav&gt;</strong>: área de navegação com links.</li>
+          <li><strong>&lt;main&gt;</strong>: conteúdo principal.</li>
+          <li><strong>&lt;section&gt;</strong>: separa blocos temáticos.</li>
+          <li><strong>&lt;article&gt;</strong>: conteúdo independente, como um artigo.</li>
+          <li><strong>&lt;aside&gt;</strong>: conteúdo complementar.</li>
+          <li><strong>&lt;footer&gt;</strong>: rodapé da página.</li>
+          <li><strong>&lt;figure&gt;</strong> e <strong>&lt;figcaption&gt;</strong>: imagem e legenda.</li>
+        </ul>
+      </article>
+
+      <aside>
+        <h3>Por que elas são importantes?</h3>
+        <p>As tags semânticas melhoram a acessibilidade, a organização do código e o SEO. Em vez de usar apenas várias <code>&lt;div&gt;</code>, elas deixam claro o papel de cada parte da página.</p>
+      </aside>
+    </section>
+
+    <section id="uxui">
+      <h2>UX e UI</h2>
+      <p><strong>UX</strong> significa <em>User Experience</em>, ou experiência do usuário. Refere-se à forma como a pessoa se sente ao usar um sistema, site ou aplicativo. Uma boa UX busca facilidade, clareza, eficiência e satisfação.</p>
+      <p><strong>UI</strong> significa <em>User Interface</em>, ou interface do usuário. É a parte visual e interativa, como botões, menus, cores, fontes e disposição dos elementos na tela.</p>
+      <p>Em resumo, UI é mais ligada à aparência e interação visual, enquanto UX é mais ligada à experiência geral do usuário durante o uso do sistema.</p>
+    </section>
+
+    <section id="wcag">
+      <h2>WCAG</h2>
+      <p>WCAG significa <strong>Web Content Accessibility Guidelines</strong>. São diretrizes internacionais criadas para tornar o conteúdo web mais acessível para todas as pessoas, inclusive aquelas com deficiência.</p>
+      <p>Essas diretrizes incentivam práticas como: contraste adequado entre texto e fundo, uso de texto alternativo em imagens, navegação por teclado, estrutura clara do conteúdo e formulários mais compreensíveis.</p>
+      <p>Seguir a WCAG é importante para promover inclusão digital e melhorar a qualidade geral de um site.</p>
+    </section>
+
+    <section id="nielsen">
+      <h2>Heurísticas de Nielsen</h2>
+      <p>As Heurísticas de Nielsen são princípios usados para avaliar a usabilidade de interfaces. Elas ajudam a identificar problemas de interação e melhorar a experiência do usuário.</p>
+
+      <ol>
+        <li>Visibilidade do status do sistema</li>
+        <li>Correspondência entre o sistema e o mundo real</li>
+        <li>Controle e liberdade do usuário</li>
+        <li>Consistência e padronização</li>
+        <li>Prevenção de erros</li>
+        <li>Reconhecimento em vez de memorização</li>
+        <li>Flexibilidade e eficiência de uso</li>
+        <li>Design estético e minimalista</li>
+        <li>Ajudar usuários a reconhecer, diagnosticar e corrigir erros</li>
+        <li>Ajuda e documentação</li>
+      </ol>
+
+      <p>Essas heurísticas são importantes porque ajudam a criar páginas mais intuitivas e fáceis de usar.</p>
+    </section>
+
+    <section>
+      <h2>Tabela de resumo</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Conceito</th>
+            <th>Definição</th>
+            <th>Importância</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>UX</td>
+            <td>Experiência do usuário</td>
+            <td>Melhora a satisfação e facilidade de uso</td>
+          </tr>
+          <tr>
+            <td>UI</td>
+            <td>Interface visual do sistema</td>
+            <td>Organiza e embeleza a interação</td>
+          </tr>
+          <tr>
+            <td>WCAG</td>
+            <td>Diretrizes de acessibilidade web</td>
+            <td>Torna o conteúdo mais inclusivo</td>
+          </tr>
+          <tr>
+            <td>Tags semânticas</td>
+            <td>Tags com significado estrutural</td>
+            <td>Melhoram acessibilidade e organização</td>
+          </tr>
+          <tr>
+            <td>Heurísticas de Nielsen</td>
+            <td>Princípios de usabilidade</td>
+            <td>Auxiliam na criação de interfaces melhores</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="midia">
+      <h2>Imagens e vídeo</h2>
+
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="Logotipo do HTML5">
+        <figcaption>Imagem ilustrativa relacionada ao HTML5.</figcaption>
+      </figure>
+
+      <p>A imagem acima foi inserida com a tag <code>&lt;img&gt;</code>, enquanto a legenda foi feita com <code>&lt;figcaption&gt;</code>. Isso também ajuda a mostrar o uso de tags semânticas.</p>
+
+      <h3>Vídeo de exemplo:</h3>
+      <p>O vídeo abaixo serve como exemplo de uso de mídia na página por meio de incorporação.</p>
+
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/3oSIqIqzN3M"
+        title="Vídeo sobre HTML"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section>
+      <h2>Exemplo de formulário</h2>
+      <p>O formulário abaixo foi incluído para mostrar o uso de mais tags HTML.</p>
+
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+        <label for="tema">Tema favorito:</label>
+        <select id="tema" name="tema">
+          <option>HTML</option>
+          <option>UX/UI</option>
+          <option>WCAG</option>
+          <option>Tags semânticas</option>
+        </select>
+
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" name="comentario" rows="4" placeholder="Escreva aqui"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="ia">
+      <h2>Usos de IA utilizados</h2>
+      <p>Nesta atividade, o uso de IA foi utilizada como apoio para:</p>
+      <ul>
+        <li>organizar a estrutura da página HTML;</li>
+        <li>auxiliar na redação dos pequenos parágrafos sobre UX/UI, WCAG, heurísticas de Nielsen e tags semânticas;</li>
+        <li>apoiar na revisão do código e na melhoria da organização visual da página.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Página metalinguística</p>
+  </footer>
+
+</body>
+</html>
